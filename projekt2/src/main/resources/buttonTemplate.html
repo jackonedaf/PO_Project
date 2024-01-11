@@ -1,0 +1,16 @@
+<!-- buttonTemplate.html -->
+<script>
+    function handleButtonClick() {
+        var element = document.getElementById("panel_sound_btn");
+        var xPosition = element.offsetLeft;
+        var yPosition = element.offsetTop;
+
+        // Wysyłamy dane do aplikacji Java poprzez wywołanie funkcji hostApp.handleButtonClick
+        window.hostApp.handleButtonClick(xPosition, yPosition);
+    }
+
+    // Po załadowaniu strony wykonaj automatyczne kliknięcie przycisku
+    document.addEventListener('DOMContentLoaded', function() {
+        handleButtonClick();
+    });
+</script>
